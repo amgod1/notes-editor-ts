@@ -1,6 +1,5 @@
 import React, { FC, useState, useRef, useEffect } from 'react';
 import { FiDelete as DeleteIcon } from 'react-icons/fi';
-import { GrUpdate as UpdateIcon } from 'react-icons/gr';
 import { MdDone as DoneIcon } from 'react-icons/md';
 import useNotes from '../../context/NotesContext';
 import NoteItemProps from './NoteItem.interface';
