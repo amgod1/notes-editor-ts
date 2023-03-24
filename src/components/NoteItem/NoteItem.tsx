@@ -1,6 +1,6 @@
 import React, { FC, useState, useRef, useEffect } from 'react';
 import { FiDelete as DeleteIcon } from 'react-icons/fi';
-import { MdDone as DoneIcon } from 'react-icons/md';
+import { BiPencil as UpdateIcon } from 'react-icons/bi';
 import useNotes from '../../context/NotesContext';
 import NoteItemProps from './NoteItem.interface';
 
@@ -56,7 +56,7 @@ const NoteItem: FC<NoteItemProps> = ({ note }) => {
 			<div className="main__item-buttons">
 				{!change && (
 					<button className="main__item-button" onClick={showInput}>
-						<DoneIcon />
+						<UpdateIcon />
 					</button>
 				)}
 				<button className="main__item-button" onClick={deleteNote(note.id)}>
