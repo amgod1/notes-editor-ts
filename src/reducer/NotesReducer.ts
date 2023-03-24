@@ -58,6 +58,10 @@ export const NotesReducer = (state: State, action: Action): State => {
 			};
 		}
 		case 'ADD_NOTE': {
+			if (!state.newNote || state.newNote.trim().length === 0) {
+				return state;
+			}
+
 			const newNotes = [
 				...state.notes,
 				{ id: crypto.randomUUID(), content: state.newNote },

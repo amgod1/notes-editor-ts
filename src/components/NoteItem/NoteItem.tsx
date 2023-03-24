@@ -55,9 +55,11 @@ const NoteItem: FC<NoteItemProps> = ({ note }) => {
 				<p>{highlightText(note.content)}</p>
 			)}
 			<div className="main__item-buttons">
-				<button className="main__item-button" onClick={showInput}>
-					{change ? <DoneIcon /> : <UpdateIcon />}
-				</button>
+				{!change && (
+					<button className="main__item-button" onClick={showInput}>
+						<DoneIcon />
+					</button>
+				)}
 				<button className="main__item-button" onClick={deleteNote(note.id)}>
 					<DeleteIcon />
 				</button>
